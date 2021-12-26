@@ -95,10 +95,6 @@ func contains(arr []int, i int) bool {
 	return false
 }
 
-func routeValid(route []int) bool {
-	return true
-}
-
 func printRoute(caves []cave, route []int) {
 	for i, s := range route {
 		c := caves[s]
@@ -115,9 +111,7 @@ func findRoutes(caves []cave, currCave int, route []int) [][]int {
 	var foundRoutes [][]int
 
 	if caves[currCave].name == "end" {
-		if routeValid(route) {
-			foundRoutes = append(foundRoutes, route)
-		}
+		foundRoutes = append(foundRoutes, route)
 		return foundRoutes
 	}
 
@@ -141,9 +135,7 @@ func findRoutes2(caves []cave, currCave int, route []int, duplicateUsed bool) []
 	var foundRoutes [][]int
 
 	if caves[currCave].name == "end" {
-		if routeValid(route) {
-			foundRoutes = append(foundRoutes, route)
-		}
+		foundRoutes = append(foundRoutes, route)
 		return foundRoutes
 	}
 
